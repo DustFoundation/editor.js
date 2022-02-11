@@ -1,5 +1,5 @@
 {
-  "name": "@hibanka/editorjs",
+  "name": "@hibanka/dust-editorjs",
   "version": "1.0.0",
   "description": "Editor.js — Native JS, based on API and Open Source",
   "main": "dist/editor.js",
@@ -13,7 +13,7 @@
   ],
   "scripts": {
     "clear": "rimraf dist && mkdirp dist",
-    "build": "yarn clear && yarn svg && export NODE_OPTIONS=--openssl-legacy-provider; yarn build:webpack:prod",
+    "build": "yarn clear && yarn svg && yarn build:webpack:prod",
     "build:dev": "yarn clear && yarn svg && yarn build:webpack:dev",
     "build:webpack:dev": "webpack --mode development --progress --display-error-details --display-entrypoints --watch",
     "build:webpack:prod": "webpack --mode production",
