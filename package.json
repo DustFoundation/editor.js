@@ -1,6 +1,6 @@
 {
-  "name": "@editorjs/editorjs",
-  "version": "2.23.2",
+  "name": "@hibanka/editorjs",
+  "version": "1.0.0",
   "description": "Editor.js — Native JS, based on API and Open Source",
   "main": "dist/editor.js",
   "types": "./types/index.d.ts",
@@ -13,7 +13,7 @@
   ],
   "scripts": {
     "clear": "rimraf dist && mkdirp dist",
-    "build": "yarn clear && yarn svg && yarn build:webpack:prod",
+    "build": "yarn clear && yarn svg && export NODE_OPTIONS=--openssl-legacy-provider; yarn build:webpack:prod",
     "build:dev": "yarn clear && yarn svg && yarn build:webpack:dev",
     "build:webpack:dev": "webpack --mode development --progress --display-error-details --display-entrypoints --watch",
     "build:webpack:prod": "webpack --mode production",
@@ -33,12 +33,8 @@
     "test:e2e": "yarn build && cypress run",
     "test:e2e:open": "yarn build && cypress open"
   },
-  "author": "CodeX",
+  "author": "Hibanka",
   "license": "Apache-2.0",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/codex-team/editor.js.git"
-  },
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/plugin-transform-runtime": "^7.9.0",
@@ -90,10 +86,6 @@
     "typescript": "3.8.3",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
-  },
-  "collective": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/editorjs"
   },
   "dependencies": {
     "codex-notifier": "^1.1.2",
