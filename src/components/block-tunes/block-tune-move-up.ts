@@ -62,6 +62,8 @@ export default class MoveUpTune implements BlockTune {
     /**
      * Enable tooltip module on button
      */
+    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+    // @ts-ignore
     this.api.tooltip.onHover(moveUpButton, this.api.i18n.t('Move up'), {
       hidingDelay: 300,
     });

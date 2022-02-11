@@ -75,6 +75,8 @@ export default class DeleteTune implements BlockTune {
     /**
      * Enable tooltip module
      */
+    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+    // @ts-ignore
     this.api.tooltip.onHover(this.nodes.button, this.api.i18n.t('Delete'), {
       hidingDelay: 300,
     });

@@ -39,11 +39,15 @@ export default class TooltipAPI extends Module {
    */
   public get methods(): ITooltip {
     return {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+      // @ts-ignore
       show: (element: HTMLElement,
         content: TooltipContent,
         options?: TooltipOptions
       ): void => this.show(element, content, options),
       hide: (): void => this.hide(),
+      // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+      // @ts-ignore
       onHover: (element: HTMLElement,
         content: TooltipContent,
         options?: TooltipOptions
